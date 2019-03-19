@@ -15,8 +15,9 @@ def calc_word_value(word):
 
 
 def max_word_value(words=None):
-    """Calculate the word with the max value, can receive a list
-    of words as arg, if none provided uses default DICTIONARY"""
+    """'key' is a callable that returns a value used for sorting;
+    the value of key should be a function that takes a single argument
+    and returns a key for sorting purposes"""
     if words is None:
         words = load_words()
     return max(words, key=calc_word_value)
