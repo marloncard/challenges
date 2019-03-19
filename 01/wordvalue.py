@@ -1,9 +1,10 @@
+# Ran 3 tests in 21.066s
 from data import DICTIONARY, LETTER_SCORES
 
 def load_words():
     """Load dictionary into a list and return list"""
     a_list = []
-    with open('dictionary.txt') as dict:
+    with open(DICTIONARY) as dict:
         for word in dict:
             a_list.append(word[:-1])
         return a_list
